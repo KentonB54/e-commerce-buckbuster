@@ -1,8 +1,10 @@
+const BASE_URL = 'https://buckbuster.onrender.com/api'
+
 export const getUsersOrders = async () => {
     const token = localStorage.getItem("token")
     const user_id = localStorage.getItem("user_id")
     try {
-        const response = await fetch(`http://localhost:3001/api/orders/${user_id}`, { 
+        const response = await fetch(`${BASE_URL}/${user_id}`, { 
             method: "GET",
             headers: {
                 'Content-Type': 'application/json', 

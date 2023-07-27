@@ -1,7 +1,9 @@
+const BASE_URL = 'https://buckbuster.onrender.com/api'
+
 export const submitOrder = async (user_id) => {
  
     try {
-        const response = await fetch(`http://localhost:3001/api/orders/${user_id}`, { 
+        const response = await fetch(`${BASE_URL}/${user_id}`, { 
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'  

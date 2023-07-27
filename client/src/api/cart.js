@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:3001/api'
+const BASE_URL = 'https://buckbuster.onrender.com/api'
 //const response = await fetch(`${BASE_URL}/cart/1`)
 
 export const getUsersCart = async () => {

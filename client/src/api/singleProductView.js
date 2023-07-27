@@ -1,8 +1,10 @@
+const BASE_URL = 'https://buckbuster.onrender.com/api';
+
 export const getSingleProduct = async (product_id) => {
 
     try {
         const response = await fetch(
-            `http://localhost:3001/api/products/${product_id}`, {
+            `${BASE_URL}/${product_id}`, {
               headers: {
                 'Content-Type': 'application/json'
               }
@@ -19,7 +21,7 @@ export const getSingleProduct = async (product_id) => {
 export const getProductReview = async (product_id) => {
     try {
         const response = await fetch(
-        `http://localhost:3001/api/products/${product_id}/reviews`, {
+        `${BASE_URL}/${product_id}/reviews`, {
             headers: {
                 'Content-Type': 'application/json'
             }

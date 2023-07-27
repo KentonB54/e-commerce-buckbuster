@@ -1,7 +1,9 @@
+const BASE_URL = "https://buckbuster.onrender.com/api";
+
 export const getAllProducts = async () => {
     try {
         const response = await fetch(
-            `http://localhost:3001/api/products`, {
+            `${BASE_URL}/products`, {
               headers: {
                 'Content-Type': 'application/json'
               }
@@ -18,7 +20,7 @@ export const getAllProducts = async () => {
 export const addProductToUsersCart = async (product_id, user_id) => {
     
   try {
-      const response = await fetch ('http://localhost:3001/api/cart', {
+      const response = await fetch (`${BASE_URL}/cart`, {
           method: "POST",
           headers: {
               'Content-Type': 'application/json'
